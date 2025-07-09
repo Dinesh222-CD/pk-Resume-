@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasanna Kumar Chintada - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                font-size: 11pt;
+            }
+            
+            .no-print {
+                display: none !important;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .name {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-item {
+            font-size: 0.9em;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .summary {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: justify;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .work-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            page-break-inside: avoid;
+        }
+
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-size: 1em;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .duration {
+            font-size: 0.9em;
+            color: #666;
+            background: #e3f2fd;
+            padding: 4px 10px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .work-description {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .responsibilities h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .resp-item {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+            color: #555;
+        }
+
+        .resp-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .education {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .degree {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            margin-bottom: 5px;
+        }
+
+        .grad-date {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .pdf-button {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pdf-button:hover {
+            background: #c0392b;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .work-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .skills-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="pdf-button no-print" onclick="window.print()">🖨️ Print/Save as PDF</button>
+    
+    <div class="header avoid-break">
+        <h1 class="name">PRASANNA KUMAR CHINTADA</h1>
+        <p class="title">OPERATIONAL MANAGER & DIGITAL MARKETING ENTHUSIAST</p>
+        <div class="contact-info">
+            <div class="contact-item">📍 Visakhapatnam, INDIA 530048</div>
+            <div class="contact-item">📞 +91 7997500545</div>
+            <div class="contact-item">✉️ chintada98@gmail.com</div>
+        </div>
+    </div>
+
+    <div class="section avoid-break">
+        <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+        <div class="summary">
+            Dynamic Operational Manager with a proven track record at Right Career Academy, excelling in optimizing online program delivery and enhancing student experiences. Skilled in data management and problem-solving, I drive process improvements and foster multidisciplinary collaboration, ensuring compliance and quality execution in educational operations. Operational management professional with strong focus on team collaboration and achieving results, adept at process optimization, strategic planning, and resource management. Known for reliability and adaptability in dynamic environments.
+        </div>
+    </div>
+
+    <div class="section avoid-break">
+        <h2 class="section-title">CORE COMPETENCIES</h2>
+        <div class="skills-container">
+            <div class="skill-item">Operations Management</div>
+            <div class="skill-item">Data Management</div>
+            <div class="skill-item">Problem-Solving</div>
+            <div class="skill-item">Inventory Control</div>
+            <div class="skill-item">Staff Management</div>
+            <div class="skill-item">Employee Motivation</div>
+            <div class="skill-item">Digital Marketing</div>
+            <div class="skill-item">SEO & SEM</div>
+            <div class="skill-item">Social Media Management</div>
+            <div class="skill-item">Analytics & Reporting</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="work-item avoid-break">
+            <div class="work-header">
+                <div>
+                    <div class="job-title">OPERATIONAL MANAGER</div>
+                    <div class="company">Right Career Academy, Visakhapatnam, India</div>
+                </div>
+                <div class="duration">01/2023 - Current</div>
+            </div>
+            <div class="work-description">
+                Manage and optimize end-to-end operations of online undergraduate and postgraduate programs, ensuring seamless student experience, academic delivery, and platform coordination. This role ensures quality execution of online learning, student support, and institutional compliance.
+            </div>
+            <div class="responsibilities">
+                <h4>Key Responsibilities:</h4>
+                <div class="resp-item">Program Operations Management: Oversee day-to-day operations for online UG & PG programs across disciplines (B.A., B.Sc., B.Com, M.A., M.Sc., MBA, etc.)</div>
+                <div class="resp-item">Coordinate course scheduling, content uploading, live sessions, and assessments</div>
+                <div class="resp-item">Monitor Learning Management System (LMS) functionality and updates</div>
+                <div class="resp-item">Student Lifecycle Management: Manage the complete student journey from onboarding, orientation, support, exams, to graduation</div>
+                <div class="resp-item">Drive process improvements and foster multidisciplinary collaboration</div>
+                <div class="resp-item">Ensure compliance and quality execution in educational operations</div>
+            </div>
+        </div>
+
+        <div class="work-item avoid-break">
+            <div class="work-header">
+                <div>
+                    <div class="job-title">DIGITAL MARKETING EXECUTIVE</div>
+                    <div class="company">Kallas Chemicals, Visakhapatnam, India</div>
+                </div>
+                <div class="duration">01/2021 - 12/2022</div>
+            </div>
+            <div class="responsibilities">
+                <h4>Key Responsibilities:</h4>
+                <div class="resp-item">Digital Campaign Management: Plan, execute, and monitor digital marketing campaigns across platforms (Google Ads, Meta Ads, LinkedIn, etc.)</div>
+                <div class="resp-item">Manage Search Engine Marketing (SEM) and Pay-Per-Click (PPC) campaigns</div>
+                <div class="resp-item">Content Creation & SEO: Perform keyword research and implement SEO strategies for better search rankings</div>
+                <div class="resp-item">Social Media Management: Manage and grow social media presence across multiple platforms</div>
+                <div class="resp-item">Website & Analytics: Coordinate with web development team to maintain and update website</div>
+                <div class="resp-item">Use tools like Google Analytics, Search Console, and SEMrush to track and report campaign performance</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section avoid-break">
+        <h2 class="section-title">EDUCATION</h2>
+        <div class="education">
+            <div class="degree">Bachelor of Technology: Computer Science</div>
+            <div class="institution">Aneel Neerukonda Institute of Technology, Visakhapatnam</div>
+            <div class="grad-date">Graduated: April 2019</div>
+        </div>
+    </div>
+</body>
+</html>
